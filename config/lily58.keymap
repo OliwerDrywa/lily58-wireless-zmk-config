@@ -10,47 +10,21 @@
 
 / {
     behaviors {
-        both_par: both_par {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BOTH_PAR";
-            bindings = <&kp LPAR>, <&kp RPAR>;
+        hold_200: hold_200 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_200";
+            bindings = <&kp>, <&kp>;
 
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        both_bkt: both_bkt {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BOTH_BKT";
-            bindings = <&kp LBKT>, <&kp RBKT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        both_brc: both_brc {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BOTH_BRC";
-            bindings = <&kp LBRC>, <&kp RBRC>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        lt_gt: lt_gt {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LT_GT";
-            bindings = <&kp LT>, <&kp GT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        base {
             // ------------------------------------------------------------------------------------------------------------
             // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
             // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
@@ -58,17 +32,17 @@
             // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
-            display-name = "Base";
+            display-name = "base";
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                        &kp N6    &kp N7   &kp N8     &kp N9   &kp N0    &kp EQUAL
-&kp TAB    &kp Q   &kp W   &kp E     &kp R     &kp T                         &kp Y     &kp U    &kp I      &kp O    &kp P     &kp MINUS
-&kp LCTRL  &kp A   &kp S   &kp D     &kp F     &kp G                         &kp H     &kp J    &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z   &kp X   &kp C     &kp V     &kp B   &kp DEL      &trans   &kp N     &kp M    &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
-                           &kp LGUI  &kp LALT  &mo 1   &kp SPACE    &kp RET  &kp BSPC  &kp ESC  &kp RALT
+&kp ESC    &kp N1  &kp N2  &kp N3    &kp N4               &kp N5                        &kp N6  &kp N7    &kp N8     &kp N9   &kp N0    &kp EQUAL
+&kp TAB    &kp Q   &kp W   &kp E     &kp R                &kp T                         &kp Y   &kp U     &kp I      &kp O    &kp P     &kp MINUS
+&kp LCTRL  &kp A   &kp S   &kp D     &kp F                &kp G                         &kp H   &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z   &kp X   &kp C     &kp V                &kp B   &kp DEL      &none    &kp N   &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
+                           &kp LGUI  &hold_200 RALT LALT  &mo 1   &kp SPACE    &kp RET  &mo 2   &kp BSPC  &kp ESC
             >;
         };
 
-        lower_layer {
+        lower {
             // ------------------------------------------------------------------------------------------------------------
             // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
             // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
@@ -76,13 +50,23 @@
             // |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
             //                     |      |      |      |        |  |       |      |       |       |
 
-            display-name = "Lower";
+            display-name = "numbers";
             bindings = <
-&trans     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans        &bt BT_CLR                                 &trans     &trans     &trans     &trans     &trans   &trans
-&kp F1     &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                                     &kp F7     &kp F8     &kp F9     &kp F10    &kp F11  &kp F12
-&kp LCTRL  &kp N1        &kp N2        &kp N3        &kp N4        &kp N5                                     &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans   &trans
-&kp LSHFT  &kp N6        &kp N7        &kp N8        &kp N9        &kp N0      &kp K_MUTE          &trans     &both_par  &both_bkt  &both_brc  &lt_gt     &trans   &trans
-                                       &kp C_VOL_DN  &kp C_VOL_UP  &trans      &kp C_PLAY_PAUSE    &kp MINUS  &kp EQUAL  &kp GRAVE  &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans        &bt BT_CLR                              &trans  &trans  &trans  &trans   &trans   &trans
+&kp F1  &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                                  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&trans  &kp N1        &kp N2        &kp N3        &kp N4        &kp N5                                  &kp N6  &kp N7  &kp N8  &kp N9   &kp N0   &trans
+&trans  &trans        &trans        &trans        &trans        &trans      &kp K_MUTE          &trans  &trans  &trans  &trans  &trans   &trans   &trans
+                                    &kp C_VOL_DN  &kp C_VOL_UP  &trans      &kp C_PLAY_PAUSE    &trans  &trans  &trans  &trans
+            >;
+        };
+
+        higher {
+            bindings = <
+&trans  &trans    &trans    &trans     &trans    &trans                          &trans    &trans    &trans  &trans     &trans  &trans
+&trans  &trans    &trans    &trans     &trans    &trans                          &trans    &trans    &trans  &trans     &trans  &trans
+&trans  &kp LPAR  &kp LBKT  &kp LBRC   &kp LT    &kp GRAVE                       &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
+&trans  &kp RPAR  &kp RBKT  &kp RBRC   &kp GT    &kp TILDE  &trans       &trans  &trans    &trans    &trans  &trans     &trans  &trans
+                            &kp EQUAL  &kp PLUS  &kp MINUS  &kp UNDER    &trans  &trans    &trans    &trans
             >;
         };
     };
