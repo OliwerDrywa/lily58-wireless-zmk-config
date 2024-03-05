@@ -25,7 +25,7 @@
         compatible = "zmk,combos";
 
         alt_tab {
-            bindings = <&kp C_AC_DESKTOP_SHOW_ALL_APPLICATIONS>;
+            bindings = <&kp LA(TAB)>;
             key-positions = <51 12>;
         };
     };
