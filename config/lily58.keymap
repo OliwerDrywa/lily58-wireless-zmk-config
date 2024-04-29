@@ -39,11 +39,11 @@
         higher {
             display-name = "nav";
             bindings = <
-&trans  &trans  &trans   &trans    &trans    &trans                    &trans        &trans         &trans      &trans         &trans  &trans
-&trans  &trans  &kp F1   &kp F2    &kp F3    &kp F4                     &kp LG(LEFT)  &kp LG(DOWN)   &kp LG(UP)  &kp LG(RIGHT)  &trans  &trans
-&trans  &trans  &kp F5   &kp F6    &kp F7    &kp F8                     &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT      &trans  &trans
-&trans  &trans  &kp F9   &kp F10   &kp F11   &kp F12  &trans    &trans  &kp HOME      &kp PAGE_DOWN  &kp PG_UP   &kp END        &trans  &trans
-                         &trans    &trans    &trans   &trans    &trans  &trans        &trans         &trans
+&trans  &trans  &trans  &trans   &trans   &trans                     &trans        &trans         &trans      &trans         &trans  &trans
+&trans  &trans  &kp F1  &kp F2   &kp F3   &kp F4                     &kp LG(LEFT)  &kp LG(DOWN)   &kp LG(UP)  &kp LG(RIGHT)  &trans  &trans
+&trans  &trans  &kp F5  &kp F6   &kp F7   &kp F8                     &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT      &trans  &trans
+&trans  &trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &kp HOME      &kp PAGE_DOWN  &kp PG_UP   &kp END        &trans  &trans
+                        &trans   &trans   &trans   &trans    &trans  &trans        &trans         &trans
             >;
         };
 
@@ -51,9 +51,9 @@
             display-name = "media";
             bindings = <
 &trans  &trans  &trans      &trans        &trans        &trans                        &trans  &trans  &trans  &trans  &trans  &trans
-&none   &none   &trans      &trans        &trans        &trans                        &trans  &trans  &trans  &trans  &trans  &trans
-&none   &none   &kp C_PREV  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &none   &trans      &trans        &kp C_PP      &trans      &none     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&none   &none   &kp C_PREV  &kp C_RW      &kp C_FF      &kp C_NEXT                    &trans  &trans  &trans  &trans  &trans  &trans
+&none   &none   &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &none   &trans      &none         &none         &kp C_PIP   &none     &trans  &trans  &trans  &trans  &trans  &trans  &trans
                             &none         &none         &none       &trans    &trans  &trans  &trans  &trans
             >;
         };
