@@ -17,11 +17,11 @@
         base {
             display-name = "base";
             bindings = <
-&none    &none  &none  &none  &none     &none                                &none       &none      &none      &none    &none     &none
-&kp TAB  &kp Q  &kp W  &kp E  &kp R     &kp T                                &kp Y       &kp U      &kp I      &kp O    &kp P     &kp BACKSPACE
-&kp ESC  &kp A  &kp S  &kp D  &kp F     &kp G                                &kp H       &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&mo 2    &kp Z  &kp X  &kp C  &kp V     &kp B      &kp DEL    &none          &kp N       &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp ENTER
-                       &none  &kp LALT  &kp SPACE  &mo 1      &kp RIGHT_GUI  &kp RSHIFT  &kp RCTRL  &none
+&none         &none  &none  &none  &none     &none                            &none       &none     &none      &none    &none     &none
+&kp TAB       &kp Q  &kp W  &kp E  &kp R     &kp T                            &kp Y       &kp U     &kp I      &kp O    &kp P     &kp BACKSPACE
+&lt 2 ESCAPE  &kp A  &kp S  &kp D  &kp F     &kp G                            &kp H       &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LCTRL     &kp Z  &kp X  &kp C  &kp V     &kp B  &kp DEL        &none      &kp N       &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RALT
+                            &none  &kp LALT  &none  &lt 1 SPACE    &kp ENTER  &kp RSHIFT  &kp RGUI  &none
             >;
         };
 
