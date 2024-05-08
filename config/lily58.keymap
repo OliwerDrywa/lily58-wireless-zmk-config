@@ -11,6 +11,15 @@
 / {
     combos { compatible = "zmk,combos"; };
 
+    macros {
+        muteall: muteall {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RET &kp FSLH &kp M &kp U &kp T &kp E &kp SPACE &kp A &kp L &kp L &kp RET>;
+            label = "MUTEALL";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -20,7 +29,7 @@
 &none         &none  &none  &none  &none     &none                                   &none       &none     &none      &none    &none     &none
 &kp TAB       &kp Q  &kp W  &kp E  &kp R     &kp T                                   &kp Y       &kp U     &kp I      &kp O    &kp P     &kp BACKSPACE
 &lt 2 ESCAPE  &kp A  &kp S  &kp D  &kp F     &kp G                                   &kp H       &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL     &kp Z  &kp X  &kp C  &kp V     &kp B       &kp DEL        &none        &kp N       &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RALT
+&kp LCTRL     &kp Z  &kp X  &kp C  &kp V     &kp B       &kp DEL        &muteall     &kp N       &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RALT
                             &none  &kp LALT  &kp LSHIFT  &lt 1 SPACE    &lt 2 ENTER  &kp RSHIFT  &kp RGUI  &none
             >;
         };
