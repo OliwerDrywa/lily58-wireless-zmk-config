@@ -9,13 +9,20 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        wintab {
+            bindings = <&kp LG(TAB)>;
+            key-positions = <50 36 12>;
+        };
+    };
 
     macros {
         muteall: muteall {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RET &kp FSLH &kp M &kp U &kp T &kp E &kp SPACE &kp A &kp L &kp L &kp RET>;
+            bindings = <&kp FSLH &kp M &kp U &kp T &kp E &kp SPACE &kp A &kp L &kp L>;
             label = "MUTEALL";
         };
     };
