@@ -35,7 +35,7 @@
 &kp TAB         &kp Q  &kp W  &kp E  &kp R     &kp T                          &kp Y  &kp U     &kp I      &kp O    &kp P     &kp BACKSPACE
 &kp LEFT_SHIFT  &kp A  &kp S  &kp D  &kp F     &kp G                          &kp H  &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LCTRL       &kp Z  &kp X  &kp C  &kp V     &kp B  &kp DEL      &muteall   &kp N  &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
-                              &none  &kp LALT  &mo 1  &kp SPACE    &kp ENTER  &mo 2  &kp RGUI  &none
+                              &none  &kp LALT  &mo 1  &kp SPACE    &kp ENTER  &mo 3  &kp RGUI  &none
             >;
         };
 
@@ -44,24 +44,13 @@
             bindings = <
 &none   &none      &none        &none      &none     &none                          &none      &none     &none      &none      &none      &none
 &trans  &kp GRAVE  &kp TILDE    &kp UNDER  &kp LBRC  &kp LBKT                       &kp RBKT   &kp RBRC  &kp PLUS   &kp MINUS  &kp EQUAL  &trans
-&mo 3   &kp N1     &kp N2       &kp N3     &kp N4    &kp N5                         &kp N6     &kp N7    &kp N8     &kp N9     &kp N0     &trans
+&mo 2   &kp N1     &kp N2       &kp N3     &kp N4    &kp N5                         &kp N6     &kp N7    &kp N8     &kp N9     &kp N0     &trans
 &trans  &kp EXCL   &kp AT_SIGN  &kp HASH   &kp DLLR  &kp PERCENT  &none     &none   &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR   &kp RPAR   &trans
                                 &none      &trans    &none        &trans    &trans  &kp MINUS  &trans    &trans
             >;
         };
 
-        higher {
-            display-name = "nav";
-            bindings = <
-&none   &none  &none   &none    &none    &none                      &none         &none          &none       &none          &none  &none
-&trans  &none  &kp F1  &kp F2   &kp F3   &kp F4                     &kp LG(LEFT)  &kp LG(DOWN)   &kp LG(UP)  &kp LG(RIGHT)  &none  &trans
-&trans  &none  &kp F5  &kp F6   &kp F7   &kp F8                     &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT      &none  &trans
-&trans  &none  &kp F9  &kp F10  &kp F11  &kp F12  &none     &none   &kp HOME      &kp PAGE_DOWN  &kp PG_UP   &kp END        &none  &trans
-                       &trans   &trans   &trans   &trans    &trans  &none         &trans         &trans
-            >;
-        };
-
-        both {
+        lowest {
             display-name = "media";
             bindings = <
 &none   &none  &none       &none         &none         &none                         &none         &none         &none         &none         &none         &none
@@ -72,13 +61,24 @@
             >;
         };
 
-        unused_numpad {
+        higher {
+            display-name = "nav";
             bindings = <
-&trans  &trans  &kp KP_N0  &kp KP_DIVIDE    &kp KP_ASTERISK  &kp BSPC                        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp KP_N1  &kp KP_N2        &kp KP_N3        &kp KP_PLUS                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp KP_N4  &kp KP_N5        &kp KP_NUMBER_6  &kp KP_MINUS                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp KP_N7  &kp KP_NUMBER_8  &kp KP_N9        &kp KP_DOT    &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                           &trans           &trans           &trans        &trans    &trans  &trans  &trans  &trans
+&none   &none  &none   &none    &none    &none                      &none         &none          &none       &none          &none  &none
+&trans  &none  &kp F1  &kp F2   &kp F3   &kp F4                     &kp LG(LEFT)  &kp LG(DOWN)   &kp LG(UP)  &kp LG(RIGHT)  &none  &trans
+&trans  &none  &kp F5  &kp F6   &kp F7   &kp F8                     &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT      &none  &mo 4
+&trans  &none  &kp F9  &kp F10  &kp F11  &kp F12  &none     &none   &kp HOME      &kp PAGE_DOWN  &kp PG_UP   &kp END        &none  &trans
+                       &trans   &trans   &trans   &trans    &trans  &none         &trans         &trans
+            >;
+        };
+
+        highest {
+            bindings = <
+&trans  &trans  &kp KP_N0  &kp KP_DIVIDE    &kp KP_ASTERISK  &kp BSPC                        &trans        &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &kp KP_N1  &kp KP_N2        &kp KP_N3        &kp KP_PLUS                     &kp KP_SLASH  &kp KP_N7  &trans  &trans  &trans  &trans
+&trans  &trans  &kp KP_N4  &kp KP_N5        &kp KP_NUMBER_6  &kp KP_MINUS                    &trans        &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &kp KP_N7  &kp KP_NUMBER_8  &kp KP_N9        &kp KP_DOT    &trans    &trans  &trans        &trans     &trans  &trans  &trans  &trans
+                           &trans           &trans           &trans        &trans    &trans  &trans        &trans     &trans
             >;
         };
     };
