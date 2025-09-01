@@ -17,9 +17,10 @@
     combos {
         compatible = "zmk,combos";
 
-        semcol {
-            bindings = <&kp SEMI>;
+        single_quote {
+            bindings = <&kp SINGLE_QUOTE>;
             key-positions = <46 47>;
+
             // timeout-ms = <50>;
             // layers = <0>;
         };
@@ -54,8 +55,8 @@
             layers = <0>;
         };
 
-        colon {
-            bindings = <&kp COLON>;
+        double_quotes {
+            bindings = <&kp DOUBLE_QUOTES>;
             key-positions = <32 33>;
             layers = <0>;
         };
@@ -86,7 +87,7 @@
 
         bigger_than {
             bindings = <&kp GREATER_THAN>;
-            key-positions = <20 21>;    
+            key-positions = <20 21>;
             layers = <0>;
         };
 
