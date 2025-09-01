@@ -17,9 +17,143 @@
     combos {
         compatible = "zmk,combos";
 
+        semcol {
+            bindings = <&kp SEMI>;
+            key-positions = <46 47>;
+            // timeout-ms = <50>;
+            // layers = <0>;
+        };
+
+        cpslck {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <36 49>;
+            layers = <0>;
+        };
+
+        parentheses_left {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <28 27>;
+            layers = <0>;
+        };
+
+        parentheses_right {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <31 32>;
+            layers = <0>;
+        };
+
+        bracket_left {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <15 16>;
+            layers = <0>;
+        };
+
+        bracket_right {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <20 19>;
+            layers = <0>;
+        };
+
+        colon {
+            bindings = <&kp COLON>;
+            key-positions = <32 33>;
+            layers = <0>;
+        };
+
+        grave {
+            bindings = <&kp GRAVE>;
+            key-positions = <27 26>;
+            layers = <0>;
+        };
+
+        brace_left {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <39 40>;
+            layers = <0>;
+        };
+
+        brace_right {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <45 46>;
+            layers = <0>;
+        };
+
+        less_than {
+            bindings = <&kp LESS_THAN>;
+            key-positions = <14 15>;
+            layers = <0>;
+        };
+
+        bigger_than {
+            bindings = <&kp GREATER_THAN>;
+            key-positions = <20 21>;    
+            layers = <0>;
+        };
+
+        hyphen {
+            bindings = <&kp MINUS>;
+            key-positions = <40 45>;
+            layers = <0>;
+        };
+
+        plus {
+            bindings = <&kp PLUS>;
+            key-positions = <16 19>;
+            layers = <0>;
+        };
+
+        equal {
+            bindings = <&kp EQUAL>;
+            key-positions = <28 31>;
+            layers = <0>;
+        };
+
+        Pipe {
+            bindings = <&kp PIPE>;
+            key-positions = <39 38>;
+            layers = <0>;
+        };
+
+        astrsk {
+            bindings = <&kp ASTERISK>;
+            key-positions = <15 20>;
+            layers = <0>;
+        };
+
+        dollar {
+            bindings = <&kp DOLLAR>;
+            key-positions = <27 32>;
+            layers = <0>;
+        };
+
+        excl {
+            bindings = <&kp EXCL>;
+            key-positions = <39 46>;
+            layers = <0>;
+        };
+
+        ampersand {
+            bindings = <&kp AMPERSAND>;
+            key-positions = <29 30>;
+            layers = <0>;
+        };
+
+        underscore {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <41 44>;
+            layers = <0>;
+        };
+
+        backslash {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <33 34>;
+            layers = <0>;
+        };
+
         tilde {
             bindings = <&kp TILDE>;
-            key-positions = <25 26>;
+            key-positions = <26 25>;
+            layers = <0>;
         };
     };
 
