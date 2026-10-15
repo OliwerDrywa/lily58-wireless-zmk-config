@@ -165,6 +165,24 @@
             bindings = <&kp FSLH &kp M &kp U &kp T &kp E &kp SPACE &kp A &kp L &kp L>;
             label = "MUTEALL";
         };
+
+        wr {
+            bindings = <&kp E>;
+            key-positions = <16 14>;
+            layers = <0>;
+        };
+
+        sf {
+            bindings = <&kp D>;
+            key-positions = <26 28>;
+            layers = <0>;
+        };
+
+        xv {
+            bindings = <&kp C>;
+            key-positions = <38 40>;
+            layers = <0>;
+        };
     };
 
     keymap {
