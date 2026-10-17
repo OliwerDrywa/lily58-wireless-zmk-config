@@ -20,16 +20,49 @@
         wr {
             bindings = <&kp E>;
             key-positions = <16 14>;
+            layers = <0>;
         };
 
         sf {
             bindings = <&kp D>;
             key-positions = <26 28>;
+            layers = <0>;
         };
 
         xv {
             bindings = <&kp C>;
             key-positions = <38 40>;
+            layers = <0>;
+        };
+
+        wr2 {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <16 14>;
+            layers = <1>;
+        };
+
+        sf2 {
+            bindings = <&kp NUMBER_3>;
+            key-positions = <26 28>;
+            layers = <1>;
+        };
+
+        xv2 {
+            bindings = <&kp HASH>;
+            key-positions = <38 40>;
+            layers = <1>;
+        };
+
+        sf-media {
+            bindings = <&kp C_VOLUME_DOWN>;
+            key-positions = <26 28>;
+            layers = <2>;
+        };
+
+        xv-media {
+            bindings = <&kp C_MUTE>;
+            key-positions = <38 40>;
+            layers = <1>;
         };
     };
 
